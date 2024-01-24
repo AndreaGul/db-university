@@ -1,4 +1,15 @@
 1. Selezionare tutti i corsi del Corso di Laurea in Informatica (22)
+
+SELECT
+    `courses`.`name`,
+    `courses`.`cfu`,
+    `degrees`.`name`
+FROM
+    `courses`
+INNER JOIN `degrees` ON `courses`.`degree_id` = `degrees`.`id`
+WHERE
+    `degrees`.`name` = "Corso di Laurea in Informatica";
+
 2. Selezionare le informazioni sul corso con id = 144, con tutti i relativi appelli d’esame
 3. Selezionare a quale dipartimento appartiene il Corso di Laurea in Diritto
 dell'Economia (Dipartimento di Scienze politiche, giuridiche e studi internazionali)
